@@ -94,7 +94,7 @@ const DeviceActivity = () => {
                 {loading ? (
                     <p className="text-graygray-400 text-xs text-center py-4">Loading sessions...</p>
                 ) : (
-                    <div className="flex flex-col gap-3 max-h-[140px] overflow-y-auto pr-2 custom-scrollbar">
+                    <div className="flex flex-col gap-3 max-h-[180px] overflow-y-auto pr-2 custom-scrollbar">
                         {[...sessions].sort((a, b) => (b.current ? 1 : 0) - (a.current ? 1 : 0)).map((session) => (
                             <div key={session.id} className="border border-gray-100 rounded-[15px] p-4">
                                 <div className="flex items-center gap-4">
