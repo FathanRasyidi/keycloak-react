@@ -18,8 +18,6 @@ const TokenInfo = () => {
     }, [keycloak.tokenParsed]);
 
     const handleRefreshToken = () => {
-        // Force update token. minValidity 9999 means if token expires in < 9999s, refresh it.
-        // Basically forcing a refresh if valid.
         keycloak.updateToken(9999).then((refreshed) => {
             if (refreshed) {
                 alert('Token Refreshed');
@@ -32,44 +30,58 @@ const TokenInfo = () => {
     };
 
     return (
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mt-6">
-            <h2 className="text-2xl font-bold mb-4">Token Management</h2>
-
-            <div className="grid grid-cols-1 gap-4 text-sm break-all">
+        <section className="bg-white rounded-[15px] shadow-[0px_3.5px_5.5px_#00000005] p-6 mt-6 flex flex-col gap-6">
+            <header className="flex items-center justify-between">
                 <div>
-                    <h3 className="font-semibold text-gray-600">Access Token (Truncated):</h3>
-                    <p className="font-mono bg-gray-100 p-2 rounded">{keycloak.token?.substring(0, 50)}...</p>
+                    <h2 className="font-bold text-graygray-700 text-lg mb-1">Token Management</h2>
+                    <p className="font-normal text-graygray-400 text-sm">
+                        Monitor and manage your authentication tokens.
+                    </p>
                 </div>
-
-                <div>
-                    <h3 className="font-semibold text-gray-600">Refresh Token (Truncated):</h3>
-                    <p className="font-mono bg-gray-100 p-2 rounded">{keycloak.refreshToken?.substring(0, 50)}...</p>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                    <div>
-                        <h3 className="font-semibold text-gray-600">Expires In:</h3>
-                        <p className={`text-xl font-bold ${expiryCountdown < 60 ? 'text-red-500' : 'text-green-500'}`}>
-                            {expiryCountdown} seconds
-                        </p>
+                <div className="flex items-center gap-3">
+                    <div className="text-right">
+                        <span className="text-graygray-400 text-[10px] font-bold uppercase block">Expires In</span>
+                        <span className={`text-lg font-bold ${expiryCountdown < 60 ? 'text-red-500' : 'text-[#42bda9]'}`}>
+                            {expiryCountdown}s
+                        </span>
                     </div>
-
                     <button
                         onClick={handleRefreshToken}
-                        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
+                        className="flex items-center gap-1 text-[#42bda9] hover:text-[#0f6486] text-xs font-bold transition-colors border border-[#42bda9]/30 px-4 py-2 rounded-xl hover:bg-[#42bda9]/5"
                     >
-                        Manually Refresh Token
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
+                            <polyline points="23 4 23 10 17 10" />
+                            <polyline points="1 20 1 14 7 14" />
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                        </svg>
+                        Refresh Token
                     </button>
                 </div>
+            </header>
 
-                <div className="mt-4">
-                    <h3 className="font-semibold text-gray-600">Decoded Token Payload:</h3>
-                    <pre className="bg-gray-900 text-green-400 p-4 rounded overflow-auto max-h-60 text-xs">
+            <div className="grid grid-cols-1 gap-4">
+                <div className="border border-gray-100 rounded-[15px] p-4">
+                    <h3 className="font-bold text-graygray-700 text-xs mb-2">Access Token</h3>
+                    <p className="font-mono bg-gray-50 p-3 rounded-xl text-xs text-graygray-500 break-all">
+                        {keycloak.token}
+                    </p>
+                </div>
+
+                <div className="border border-gray-100 rounded-[15px] p-4">
+                    <h3 className="font-bold text-graygray-700 text-xs mb-2">Refresh Token</h3>
+                    <p className="font-mono bg-gray-50 p-3 rounded-xl text-xs text-graygray-500 break-all">
+                        {keycloak.refreshToken}
+                    </p>
+                </div>
+
+                <div className="border border-gray-100 rounded-[15px] p-4">
+                    <h3 className="font-bold text-graygray-700 text-xs mb-2">Decoded Token Payload</h3>
+                    <pre className="bg-gray-900 text-green-400 p-4 rounded-xl overflow-auto max-h-60 text-[10px] custom-scrollbar">
                         {JSON.stringify(keycloak.tokenParsed, null, 2)}
                     </pre>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

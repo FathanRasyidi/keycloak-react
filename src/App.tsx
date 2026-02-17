@@ -1,34 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home.tsx';
-import Dashboard from './pages/Dashboard.tsx';
 import Profile from './pages/Profile.tsx';
 import PrivateRoute from './auth/PrivateRoute.tsx';
-import Navbar from './components/Navbar.tsx';
+import Sidebar from './components/layout/Sidebar.tsx';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-        <Navbar />
-        <main className="container mx-auto p-4">
+      <div className="flex w-full min-h-screen bg-[#f8f9fa] text-gray-800 font-sans antialiased">
+        <Sidebar />
+        <main className="flex-1 flex flex-col p-6 pt-10 pb-0 overflow-x-hidden">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route
-              path="/dashboard"
-              element={
-                <PrivateRoute>
-                  <Dashboard />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/profile"
-              element={
-                <PrivateRoute>
-                  <Profile />
-                </PrivateRoute>
-              }
-            />
+            <Route path="/account" element={<PrivateRoute><Profile /></PrivateRoute>} />
           </Routes>
         </main>
       </div>
