@@ -126,7 +126,7 @@ const SecuritySettings = () => {
                                     Configured on: {formatDate(otpCred.createdDate)}
                                 </p>
                             ) : (
-                                <p className="text-graygray-400 text-xs mt-0.5">Not configured.</p>
+                                <p className="text-red-600 text-xs mt-0.5">Not configured.</p>
                             )}
                         </div>
                     </div>
