@@ -9,7 +9,7 @@
   <body>
     <div id="root"></div>
 
-    <!-- BYPASS HTTPS doang, biar bisa jalan di localhost tanpa perlu setup SSL. Jangan dipakai di production ya! -->
+    <!-- BYPASS HTTP doang. Jangan dipakai di production ya! -->
     <script>
       // DEV ONLY: polyfill crypto.subtle & randomUUID for HTTP (non-localhost)
       if(typeof crypto!=='undefined'&&!crypto.subtle){
