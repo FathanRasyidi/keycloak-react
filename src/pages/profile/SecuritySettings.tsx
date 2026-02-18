@@ -94,7 +94,7 @@ const SecuritySettings = () => {
                             <h3 className="font-bold text-graygray-700 text-sm">Password</h3>
                             {passwordCred ? (
                                 <p className="text-graygray-400 text-xs mt-0.5">
-                                    Created: {formatDate(passwordCred.createdDate)}
+                                    Last Updated: {formatDate(passwordCred.createdDate)}
                                 </p>
                             ) : (
                                 <p className="text-graygray-400 text-xs mt-0.5">No password set.</p>
@@ -123,7 +123,7 @@ const SecuritySettings = () => {
                             <h3 className="font-bold text-graygray-700 text-sm">Two-Factor Authentication</h3>
                             {otpCred ? (
                                 <p className="text-graygray-400 text-xs mt-0.5">
-                                    Configured on: {formatDate(otpCred.createdDate)}
+                                    Last Configured: {formatDate(otpCred.createdDate)}
                                 </p>
                             ) : (
                                 <p className="text-red-600 text-xs mt-0.5">Not configured.</p>
