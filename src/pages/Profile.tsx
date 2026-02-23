@@ -256,7 +256,7 @@ const Profile = () => {
             <LinkedAccounts />
 
             {/* Token Management */}
-            <TokenInfo />
+            {/* <TokenInfo /> */}
 
             <Footer />
         </div>

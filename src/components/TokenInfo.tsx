@@ -18,7 +18,7 @@ const TokenInfo = () => {
     }, [keycloak.tokenParsed]);
 
     const handleRefreshToken = () => {
-        keycloak.updateToken(9999).then((refreshed) => {
+        keycloak.updateToken(30).then((refreshed) => {
             if (refreshed) {
                 alert('Token Refreshed');
             } else {
