@@ -61,25 +61,22 @@ const Sidebar = () => {
                         <Link
                             key={item.path}
                             to={item.path}
-                            className={`group flex items-center gap-3 px-4 py-3 rounded-[15px] transition-all relative w-full no-underline ${
-                                active
-                                    ? 'bg-white shadow-[0px_3.5px_5.5px_#00000005]'
-                                    : 'hover:bg-gray-100 bg-transparent'
-                            }`}
+                            className={`group flex items-center gap-3 px-4 py-3 rounded-[15px] transition-all relative w-full no-underline ${active
+                                ? 'bg-white shadow-[0px_3.5px_5.5px_#00000005]'
+                                : 'hover:bg-gray-100 bg-transparent'
+                                }`}
                         >
                             <div
-                                className={`p-1.5 rounded-xl ${
-                                    active
-                                        ? 'bg-[#42bda9] text-white'
-                                        : 'bg-white text-tealteal-300 shadow-[0px_3.5px_5.5px_#00000005]'
-                                }`}
+                                className={`p-1.5 rounded-xl ${active
+                                    ? 'bg-[#4c1d95] text-white'
+                                    : 'bg-white text-purplepurple-900 shadow-[0px_3.5px_5.5px_#00000005]'
+                                    }`}
                             >
                                 {item.icon}
                             </div>
                             <span
-                                className={`font-bold text-xs tracking-[0] whitespace-nowrap ${
-                                    active ? 'text-graygray-700' : 'text-graygray-400'
-                                }`}
+                                className={`font-bold text-xs tracking-[0] whitespace-nowrap ${active ? 'text-graygray-700' : 'text-graygray-400'
+                                    }`}
                             >
                                 {item.label}
                             </span>
@@ -90,8 +87,9 @@ const Sidebar = () => {
 
             {/* Help Card */}
             <div className="mt-auto mb-4 p-4 relative">
-                <div className="relative rounded-[15px] overflow-hidden bg-[linear-gradient(to_top_right,#42bda9,75%,#0f6486)] p-4 min-h-[120px] flex flex-col justify-between">
-                    <div>
+                <div className="relative rounded-[15px] overflow-hidden shadow-md p-4 min-h-[120px] flex flex-col justify-between border-0">
+                    <div className="absolute inset-0 bg-[linear-gradient(to_top_right,#4c1d95,60%,#fbbf24)] opacity-80 z-10"></div>
+                    <div className="relative z-20">
                         <h3 className="text-white font-bold text-sm mb-1">Need help?</h3>
                         <p className="text-white text-xs">Please Contact Us</p>
                     </div>
@@ -99,7 +97,7 @@ const Sidebar = () => {
                         href="https://discord.com/servers/diskominfo-diy-905311916359041064"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full bg-white flex items-center justify-center py-2.5 rounded-xl mt-2 hover:opacity-90 transition-opacity"
+                        className="relative z-20 w-full bg-white flex items-center justify-center py-2.5 rounded-xl mt-2 hover:opacity-90 transition-opacity no-underline"
                     >
                         <span className="font-bold text-graygray-700 text-[10px] tracking-[0]">
                             CONTACT US

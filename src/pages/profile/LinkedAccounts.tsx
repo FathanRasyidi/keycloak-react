@@ -116,7 +116,7 @@ const LinkedAccounts = () => {
                 <button
                     onClick={handleRefresh}
                     disabled={refreshing || !keycloak.authenticated}
-                    className="flex items-center gap-1 text-[#42bda9] hover:text-[#0f6486] text-xs font-bold transition-colors disabled:opacity-50"
+                    className="flex items-center gap-1 text-[#734da8] hover:text-[#4c1d95] text-xs font-bold transition-colors disabled:opacity-50"
                 >
                     <svg
                         viewBox="0 0 24 24"
@@ -174,7 +174,7 @@ const LinkedAccounts = () => {
                                             )}
                                             <button
                                                 onClick={() => handleUnlink(account.providerName)}
-                                                className="flex items-center gap-1 text-[#42bda9] hover:text-[#0f6486] text-xs font-bold transition-colors"
+                                                className="flex items-center gap-1 text-[#734da8] hover:text-[#4c1d95] text-xs font-bold transition-colors"
                                             >
                                                 <span className="text-lg leading-none mb-0.5">×</span> Unlink account
                                             </button>
@@ -209,7 +209,7 @@ const LinkedAccounts = () => {
                                         <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 flex-1 md:justify-end">
                                             <button
                                                 onClick={() => handleLink(account.providerAlias)}
-                                                className="flex items-center gap-1 text-[#42bda9] hover:text-[#0f6486] text-xs font-bold transition-colors"
+                                                className="flex items-center gap-1 text-[#734da8] hover:text-[#4c1d95] text-xs font-bold transition-colors"
                                             >
                                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
                                                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />

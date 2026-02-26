@@ -84,7 +84,7 @@ const SecuritySettings = () => {
             <div className="border border-gray-100 rounded-[15px] p-5">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="flex items-center gap-4">
-                        <div className="p-2 rounded-xl bg-[#42bda9]/10 text-[#42bda9]">
+                        <div className="p-2 rounded-xl bg-[#4c1d95]/10 text-[#4c1d95]">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                                 <path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -103,7 +103,7 @@ const SecuritySettings = () => {
                     </div>
                     <button
                         onClick={handleUpdatePassword}
-                        className="flex items-center gap-1 text-[#42bda9] hover:text-[#0f6486] text-xs font-bold transition-colors border border-[#42bda9]/30 px-4 py-2 rounded-xl hover:bg-[#42bda9]/5"
+                        className="flex items-center gap-1 text-[#734da8] hover:text-[#4c1d95] text-xs font-bold transition-colors border border-[#734da8]/30 px-4 py-2 rounded-xl hover:bg-[#4c1d95]/5"
                     >
                         Update Password
                     </button>
@@ -114,7 +114,7 @@ const SecuritySettings = () => {
             <div className="border border-gray-100 rounded-[15px] p-5">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="flex items-center gap-4">
-                        <div className="p-2 rounded-xl bg-[#42bda9]/10 text-[#42bda9]">
+                        <div className="p-2 rounded-xl bg-[#4c1d95]/10 text-[#4c1d95]">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                             </svg>
@@ -140,7 +140,7 @@ const SecuritySettings = () => {
                     ) : (
                         <button
                             onClick={handleSetup2FA}
-                            className="flex items-center gap-1 text-[#42bda9] hover:text-[#0f6486] text-xs font-bold transition-colors border border-[#42bda9]/30 px-4 py-2 rounded-xl hover:bg-[#42bda9]/5"
+                            className="flex items-center gap-1 text-[#734da8] hover:text-[#4c1d95] text-xs font-bold transition-colors border border-[#734da8]/30 px-4 py-2 rounded-xl hover:bg-[#4c1d95]/5"
                         >
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
                                 <line x1="12" y1="5" x2="12" y2="19" />

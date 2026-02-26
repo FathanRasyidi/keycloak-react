@@ -26,8 +26,8 @@ const PageHeader = ({ title, breadcrumbs }: PageHeaderProps) => {
 
     return (
         <>
-            <header className="w-full flex justify-between items-start min-h-[300px] bg-[#42bda9] rounded-[25px] p-6 bg-[url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard-pro/assets/img/curved-images/curved0.jpg')] bg-cover bg-center relative overflow-hidden border border-white">
-                <span className="absolute inset-0 bg-[linear-gradient(to_top_right,#42bda9,75%,#0f6486)] opacity-80"></span>
+            <header className="w-full flex justify-between items-start min-h-[300px] rounded-[25px] p-6 relative overflow-hidden shadow-md">
+                <span className="absolute inset-0 bg-[linear-gradient(to_top_right,#4c1d95,60%,#fbbf24)] opacity-80 z-0"></span>
 
                 <div className="flex flex-col gap-1 relative z-10 w-full md:w-auto">
                     <nav aria-label="Breadcrumb">
@@ -64,9 +64,8 @@ const PageHeader = ({ title, breadcrumbs }: PageHeaderProps) => {
                     <div className="flex items-center gap-4 text-white">
                         <button
                             onClick={handleAuthAction}
-                            className={`flex items-center gap-2 cursor-pointer transition-all duration-300 bg-white rounded-full px-5 py-2 shadow-md hover:shadow-lg hover:scale-105 ${
-                                keycloak.authenticated ? 'text-red-500' : 'text-[#42bda9]'
-                            }`}
+                            className={`flex items-center gap-2 cursor-pointer transition-all duration-300 bg-white rounded-full px-5 py-2 shadow-md hover:shadow-lg hover:scale-105 ${keycloak.authenticated ? 'text-red-500' : 'text-[#4c1d95]'
+                                }`}
                             aria-label={keycloak.authenticated ? 'Sign Out' : 'Sign In'}
                         >
                             {keycloak.authenticated ? (
@@ -75,7 +74,7 @@ const PageHeader = ({ title, breadcrumbs }: PageHeaderProps) => {
                                     <line x1="12" y1="2" x2="12" y2="12" />
                                 </svg>
                             ) : (
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-[#42bda9]">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 text-[#4c1d95]">
                                     <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
                                     <polyline points="10 17 15 12 10 7" />
                                     <line x1="15" y1="12" x2="3" y2="12" />

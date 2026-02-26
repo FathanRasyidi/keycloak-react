@@ -41,13 +41,13 @@ const TokenInfo = () => {
                 <div className="flex items-center gap-3">
                     <div className="text-right">
                         <span className="text-graygray-400 text-[10px] font-bold uppercase block">Expires In</span>
-                        <span className={`text-lg font-bold ${expiryCountdown < 60 ? 'text-red-500' : 'text-[#42bda9]'}`}>
+                        <span className={`text-lg font-bold ${expiryCountdown < 60 ? 'text-red-500' : 'text-[#4c1d95]'}`}>
                             {expiryCountdown}s
                         </span>
                     </div>
                     <button
                         onClick={handleRefreshToken}
-                        className="flex items-center gap-1 text-[#42bda9] hover:text-[#0f6486] text-xs font-bold transition-colors border border-[#42bda9]/30 px-4 py-2 rounded-xl hover:bg-[#42bda9]/5"
+                        className="flex items-center gap-1 text-[#734da8] hover:text-[#4c1d95] text-xs font-bold transition-colors border border-[#734da8]/30 px-4 py-2 rounded-xl hover:bg-[#4c1d95]/5"
                     >
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
                             <polyline points="23 4 23 10 17 10" />

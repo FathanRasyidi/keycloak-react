@@ -25,7 +25,7 @@ const LoginModal = ({ isOpen, onSignIn, onCancel }: LoginModalProps) => {
                     <button
                         onClick={onSignIn}
                         type="button"
-                        className="inline-flex justify-center rounded-xl bg-[#42bda9] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#0f6486] sm:w-auto"
+                        className="inline-flex justify-center rounded-xl bg-[#4c1d95] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#fbbf24] sm:w-auto"
                     >
                         Sign In
                     </button>

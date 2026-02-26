@@ -148,7 +148,7 @@ const Profile = () => {
                                             type="text"
                                             value={firstName}
                                             onChange={(e) => setFirstName(e.target.value)}
-                                            className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#42bda9] transition-colors"
+                                            className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#4c1d95] transition-colors"
                                         />
                                     </div>
                                     <div>
@@ -157,7 +157,7 @@ const Profile = () => {
                                             type="text"
                                             value={lastName}
                                             onChange={(e) => setLastName(e.target.value)}
-                                            className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#42bda9] transition-colors"
+                                            className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#4c1d95] transition-colors"
                                         />
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@ const Profile = () => {
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#42bda9] transition-colors"
+                                        className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-[#4c1d95] transition-colors"
                                     />
                                 </div>
                                 <div className="flex justify-end gap-2 pt-2">
@@ -180,7 +180,7 @@ const Profile = () => {
                                     </button>
                                     <button
                                         type="submit"
-                                        className="px-6 py-2 bg-[#42bda9] text-white rounded-xl text-sm font-bold hover:bg-[#0f6486] transition-colors shadow-md"
+                                        className="px-6 py-2 bg-[#4c1d95] text-white rounded-xl text-sm font-bold hover:bg-[#fbbf24] transition-colors shadow-md"
                                     >
                                         Save Changes
                                     </button>

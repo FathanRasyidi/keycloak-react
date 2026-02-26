@@ -150,7 +150,7 @@ const Home = () => {
         <div className="flex flex-col gap-2">
             {/* Hero Section */}
             <div className="relative w-full h-[280px] rounded-[25px] overflow-hidden shadow-md mb-8">
-                <div className="absolute inset-0 bg-[linear-gradient(to_top_right,#42bda9,75%,#0f6486)] opacity-80 z-10"></div>
+                <div className="absolute inset-0 bg-[linear-gradient(to_top_right,#4c1d95,60%,#fbbf24)] opacity-80 z-10"></div>
                 <div className="absolute inset-0 z-20 flex flex-col justify-center px-10 text-white">
                     <h1 className="text-3xl font-bold mb-2">
                         {keycloak.authenticated
@@ -161,10 +161,10 @@ const Home = () => {
                         Akses layanan publik Pemerintah Daerah DIY dengan mudah, cepat, dan transparan melalui satu pintu.
                     </p>
                     <a
-                            href="#quick-access"
-                            className="mt-6 bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-xl w-fit hover:bg-yellow-400 transition-colors shadow-lg no-underline"
-                        >
-                            Jelajahi Layanan
+                        href="#quick-access"
+                        className="mt-6 bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-xl w-fit hover:bg-yellow-400 transition-colors shadow-lg no-underline"
+                    >
+                        Jelajahi Layanan
                     </a>
                 </div>
             </div>
@@ -174,7 +174,7 @@ const Home = () => {
                 <div className="mb-8">
                     <h2 className="font-bold text-gray-800 text-2xl mb-2 relative inline-block">
                         Layanan Publik
-                        <div className="h-1 w-12 bg-[#42bda9] mx-auto mt-2 rounded-full"></div>
+                        <div className="h-1 w-12 bg-[#4c1d95] mx-auto mt-2 rounded-full"></div>
                     </h2>
                     <p className="text-gray-500 text-sm mt-2 max-w-2xl mx-auto">
                         Dapatkan layanan publik untuk memenuhi kebutuhan masyarakat Yogyakarta dengan mudah
@@ -185,9 +185,9 @@ const Home = () => {
                     {quickAccessItems.map((item) => (
                         <button
                             key={item.label}
-                            className="flex flex-col items-center justify-center p-6 bg-white rounded-[15px] shadow-sm hover:shadow-md transition-all border border-transparent hover:border-[#42bda9]/30 group cursor-pointer h-full"
+                            className="flex flex-col items-center justify-center p-6 bg-white rounded-[15px] shadow-sm hover:shadow-md transition-all border border-transparent hover:border-[#4c1d95]/30 group cursor-pointer h-full"
                         >
-                            <div className="mb-4 text-[#42bda9] group-hover:scale-110 transition-transform">
+                            <div className="mb-4 text-[#4c1d95] group-hover:scale-110 transition-transform">
                                 {item.icon}
                             </div>
                             <h3 className="text-gray-700 font-medium text-xs text-center leading-tight">
@@ -202,7 +202,7 @@ const Home = () => {
             <section className="bg-transparent ">
                 <h2 className="font-bold text-graygray-700 text-lg mb-4 flex justify-between items-center">
                     <span>Berita Terkini</span>
-                    <span className="text-[#42bda9] text-xs cursor-pointer hover:text-[#0f6486] transition-colors">
+                    <span className="text-[#734da8] text-xs cursor-pointer hover:text-[#4c1d95] transition-colors">
                         Lihat Semua
                     </span>
                 </h2>
@@ -215,7 +215,7 @@ const Home = () => {
                             <div className="w-full h-48 bg-gray-200 animate-pulse"></div>
                             <div className="p-4 flex flex-col flex-1">
                                 <div className="mb-2">
-                                    <span className="bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase">
+                                    <span className="bg-yellow-50 text-yellow-600 text-[10px] font-bold px-2 py-1 rounded-full uppercase">
                                         {news.date}
                                     </span>
                                 </div>
@@ -225,7 +225,7 @@ const Home = () => {
                                 <p className="text-gray-500 text-xs leading-relaxed mb-4 line-clamp-3">
                                     {news.description}
                                 </p>
-                                <button className="mt-auto text-[#42bda9] text-xs font-bold text-left hover:text-[#0f6486] transition-colors">
+                                <button className="mt-auto text-[#734da8] text-xs font-bold text-left hover:text-[#4c1d95] transition-colors">
                                     Baca Selengkapnya &rarr;
                                 </button>
                             </div>

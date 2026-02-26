@@ -72,7 +72,7 @@ const DeviceActivity = () => {
                     <button
                         onClick={handleRefresh}
                         disabled={refreshing || !keycloak.authenticated}
-                        className="flex items-center gap-1 text-[#42bda9] hover:text-[#0f6486] text-xs font-bold transition-colors disabled:opacity-50"
+                        className="flex items-center gap-1 text-[#734da8] hover:text-[#4c1d95] text-xs font-bold transition-colors disabled:opacity-50"
                     >
                         <svg
                             viewBox="0 0 24 24"
@@ -134,7 +134,7 @@ const DeviceActivity = () => {
                                     </div>
                                     <div className="flex flex-col">
                                         <span className="text-graygray-700 text-xs font-bold">Last accessed</span>
-                                        <span className="text-graygray-500 text-xs text-[#42bda9]">
+                                        <span className="text-graygray-500 text-xs text-[#4c1d95]">
                                             {formatDate(session.lastAccess)}
                                         </span>
                                     </div>
