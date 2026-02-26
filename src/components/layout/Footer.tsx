@@ -6,7 +6,7 @@ const Footer = () => {
                     <p className="font-normal">
                         &copy; 2026{' '}
                         <span className="font-bold text-[#42bda9]">
-                            Pemerintah Daerah Istimewa Yogyakarta
+                            Pemerintah Daerah Daerah Istimewa Yogyakarta
                         </span>
                         . All rights reserved.
                     </p>
